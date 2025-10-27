@@ -1,0 +1,99 @@
+/* =====================================
+RESET / VARIABLES / FUENTES
+===================================== */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'interlope';
+    src: url('../assets/fonts/interlope/Interlope-Regular.ttf') format('ttf');
+    font-weight: regular;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'steps-mono';
+    src: url('../assets/fonts/steps-mono/Steps-Mono.otf') format('otf');
+    font-weight: mono;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'murmure';
+    src: url('../assets/fonts/murmure/le-murmure.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'karrik';
+    src: url('../assets/fonts/karrik/Karrik-Regular.ttf') format('ttf');
+    font-weight: regular;
+    font-style: regular;
+    }
+@font-face {
+    font-family: 'picnic';
+    src: url('../assets/fonts/picnic/PicNic-Regular.otf') format('otf');
+    font-weight: regular;
+    font-style: regular;
+    }
+@font-face {
+    font-family: 'outward';
+    src: url('../assets/fonts/outward/outward-block.ttf') format('ttf');
+    font-weight: regular;
+    font-style: regular;
+    }
+
+
+:root{
+    --color-background: #E5E5DD;
+    --color-text: #1a1a1a;
+    --color-secondary-text: #888888;
+    --color-accent: #1516FE;
+    --color-highlights:#FFFFFF;
+    --font-display: 'Eurostile', sans-serif;
+    --font-body: 'Mozilla Text', serif;
+    --h1:3.8rem;
+    --h2:3.6rem;
+    --md: 1.4rem;
+    --sm:1.2rem;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: var(--font-body);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    background-color: var(--color-background);
+}
+h1, h2, h3, h4{
+    font-family: var(--font-display);
+}
+
+/* =====================================
+HEADER / NAVBAR
+===================================== */
+p{  
+    font-size: 50px;
+}
+p:nth-child(1){
+    font-family: interlope;
+}
+p:nth-child(2){
+    font-family: 'steps-mono';
+}
+p:nth-child(3){
+    font-family: 'murmure';
+}
+p:nth-child(4){
+    font-family: 'karrik';
+
+}
+p:nth-child(5){
+    font-family: 'picnic';
+
+}
+p:nth-child(6){
+    font-family: 'outward';
+
+}
