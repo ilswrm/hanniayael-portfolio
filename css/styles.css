@@ -51,20 +51,23 @@ RESET / VARIABLES / FUENTES
     --color-secondary-text: #888888;
     --color-accent: #1516FE;
     --color-highlights:#FFFFFF;
-    --font-display: 'Eurostile', sans-serif;
-    --font-body: 'Mozilla Text', serif;
+    --font-headings: 'Inter', sans-serif;
+    --font-sections: 'Inter', sans-serif;
+    --font-body1: 'Roboto', sans-serif;
+    --font-body2: 'Playfair Display', serif;
+
     --h1:3.8rem;
     --h2:3.6rem;
     --md: 1.4rem;
     --sm:1.2rem;
 }
 
-html{
+body{
     font-size: 62.5%;
     font-family: var(--font-body);
     font-optical-sizing: auto;
-    font-weight: 300;
     background-color: var(--color-background);
+
 }
 h1, h2, h3, h4{
     font-family: var(--font-display);
@@ -73,27 +76,7 @@ h1, h2, h3, h4{
 /* =====================================
 HEADER / NAVBAR
 ===================================== */
-p{  
-    font-size: 50px;
-}
-p:nth-child(1){
-    font-family: interlope;
-}
-p:nth-child(2){
-    font-family: 'steps-mono';
-}
-p:nth-child(3){
-    font-family: 'murmure';
-}
-p:nth-child(4){
-    font-family: 'karrik';
-
-}
-p:nth-child(5){
-    font-family: 'picnic';
-
-}
-p:nth-child(6){
-    font-family: 'outward';
-
+p{
+    font-family: var(--font-headings);
+    font-size: 150px;
 }
