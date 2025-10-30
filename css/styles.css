@@ -56,27 +56,125 @@ RESET / VARIABLES / FUENTES
     --font-body1: 'Roboto', sans-serif;
     --font-body2: 'Playfair Display', serif;
 
-    --h1:3.8rem;
-    --h2:3.6rem;
+    --sm: 1.25rem;
     --md: 1.4rem;
-    --sm:1.2rem;
+
+    
 }
+/* =====================================
+BODY / MAIN / TIPOGRAFÍA
+===================================== */
 
 body{
-    font-size: 62.5%;
-    font-family: var(--font-body);
-    font-optical-sizing: auto;
+    font-family: var(--font-body1);
     background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+main{
+    margin: 1.25rem;
+}
+/* =====================================
+HEADER / NAVBAR MOBILE FIRST
+===================================== */
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+.menu-logo{
+    display: block;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    z-index: 1100;
+}
+.logo{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
 
 }
-h1, h2, h3, h4{
-    font-family: var(--font-display);
+/* =====================================
+MENU LIST (MOBILE)
+===================================== */
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    background-color: var(--color-background);
+    gap: 3rem;
+    z-index: 1000;
+
+    opacity: 0;
+    pointer-events: none;
+}
+.menu-list.active {
+    pointer-events: all;
+}
+.menu-item{
+    list-style-type: none;
+}
+.menu-item a{
+    font-size: 2rem; /* grande para mobile */
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text);
+}
+/* =====================================
+LOGO DE IDIOMA
+===================================== */
+.lang-icon {
+    display: block; /* visible en mobile dentro del menú */
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url("../assets/icons/lang.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+/* =====================================
+ESTADOS DEL MENU
+===================================== */
+.menu.open {
+    flex-direction: column;
+}
+
+.menu:not(.open) {
+    flex-direction: row;
 }
 
 /* =====================================
-HEADER / NAVBAR
+HERO
 ===================================== */
-p{
-    font-family: var(--font-headings);
-    font-size: 150px;
+.hero{
+    
+
 }
+.hero-info{
+
+}
+.hero-title{
+    font-family:var(--font-headings);
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 3.6rem;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.hero-text{
+
+}
+
