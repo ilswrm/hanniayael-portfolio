@@ -39,7 +39,7 @@ RESET / VARIABLES / FUENTES
     }
 @font-face {
     font-family: 'outward';
-    src: url('../assets/fonts/outward/outward-block.ttf') format('ttf');
+    src: url('../assets/fonts/outward/outward-block.ttf') format('truetype');
     font-weight: regular;
     font-style: regular;
     }
@@ -72,7 +72,8 @@ body{
 }
 
 main{
-    margin: 1.25rem;
+    margin: 1rem;
+    margin-bottom: 80px;
 }
 /* =====================================
 HEADER / NAVBAR MOBILE FIRST
@@ -82,7 +83,12 @@ HEADER / NAVBAR MOBILE FIRST
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1100;
 }
 .menu-logo{
     display: block;
@@ -95,7 +101,7 @@ HEADER / NAVBAR MOBILE FIRST
 .logo{
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: .8rem;
 
 }
 /* =====================================
@@ -158,23 +164,65 @@ ESTADOS DEL MENU
 /* =====================================
 HERO
 ===================================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
 .hero{
-    
-
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 .hero-info{
-
+    flex: 1; /* ← esto hace que crezca hasta llenar el alto disponible */
+    display: flex;
+    flex-direction: column;
 }
 .hero-title{
-    font-family:var(--font-headings);
-    font-weight: 900;
-    font-size: 4rem;
-    line-height: 3.6rem;
-    text-align: center;
-    margin-top: 4rem;
+    font-family: var(--font-headings);
+    font-weight: 600;
+    font-size: 2.8rem;
+    text-align: left;
+    line-height: 1.2;
     margin-bottom: 2rem;
+
 }
 .hero-text{
+    font-family: var(--font-sections);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: right ;
+}
+.hero-text.last{
+    margin-top: auto;         /* lo empuja hacia abajo */
+    align-self: flex-end; 
+    text-align: left;    /* alineado al lado derecho */
+    font-weight: 400;
+    padding-bottom:50px;
+}
+.hero-dynamic-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap;
+    z-index: 5;
+}
 
+.changing-text{
+    font-size: 3.9rem;
+    font-family: 'karrik';
+    font-weight: 500;
+    display: inline-block;
 }
 

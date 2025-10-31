@@ -19,12 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuItems = document.querySelectorAll('.menu-item');
     const langIcon = document.querySelector('.lang-icon');
 
-    // Animaciones iniciales para móvil
     gsap.set(menuList, { autoAlpha: 0, y: -30 });
     gsap.set(menuItems, { autoAlpha: 0, y: -20 });
     gsap.set(langIcon, { autoAlpha: 0, y: -20 });
 
-    // Función para resetear GSAP en desktop
+    // resetear GSAP en desktop
     function resetMenuDesktop() {
         if (window.innerWidth >= 930) {
             gsap.set(menuList, { clearProps: "all" });
@@ -34,16 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Ejecutar al cargar y al redimensionar
     resetMenuDesktop();
     window.addEventListener('resize', resetMenuDesktop);
 
-    // Toggle del menú (solo móvil)
     menuLogo.addEventListener('click', () => {
         const isActive = menuList.classList.toggle('active');
         menu.classList.toggle('open', isActive);
 
-        // Animación botón MENU / CERRAR
         gsap.to(menuLogo, {
             duration: 0.2,
             autoAlpha: 0,
@@ -55,10 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (isActive) {
-            // Ocultar logo principal
+
             logo.style.display = 'none';
 
-            // Animación de apertura del menú
             gsap.to(menuList, {
                 autoAlpha: 1,
                 y: 0,
@@ -66,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: "power2.out"
             });
 
-            // Animación de links con stagger
             gsap.to(menuItems, {
                 autoAlpha: 1,
                 y: 0,
@@ -75,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 stagger: 0.1
             });
 
-            // Animación del logo de idioma dentro del menú
             gsap.to(langIcon, {
                 autoAlpha: 1,
                 y: 0,
@@ -84,11 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
         } else {
-            // Mostrar logo principal inmediatamente con fade
             logo.style.display = 'block';
             gsap.fromTo(logo, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 });
 
-            // Animación de cierre del menú
             gsap.to(menuList, {
                 autoAlpha: 0,
                 y: -30,
@@ -109,27 +100,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 0.3
             });
 
-            // Cambiar texto del botón MENU inmediatamente
             menuLogo.textContent = 'MENU';
         }
     });
 });
 
-        
-        /*menuLogo.addEventListener('click', () => {
-            menuList.classList.toggle('active');
+gsap.registerPlugin(ScrollTrigger);
 
-            if (menuList.classList.contains('active')){
-                logo.style.display = 'none';
-                menuLogo.textContent = 'CERRAR';
-                menu.style.flexDirection = 'column';
+const dynamicText = document.querySelector(".changing-text");
 
-            } 
-            else {
-                logo.style.display = 'block';
-                menuLogo.textContent = 'MENU';
-                menu.style.flexDirection = 'row';
+// Timeline para rotar tipografías y tamaños instantáneamente
+const tl = gsap.timeline({ repeat: -1 });
 
-            }
+tl.to(dynamicText, { fontFamily: "interlope", fontSize: "3.9rem", duration: 0.01, ease: "none", delay: 2 })
+    .to(dynamicText, { fontFamily: "picnic", fontSize: "4rem", duration: 0.01, ease: "none", delay: 3 })
+    .to(dynamicText, { fontFamily: "murmure", fontSize: "8rem", duration: 0.01, ease: "none", delay: 2})
+    .to(dynamicText, { fontFamily: "outward", fontSize: "15rem",fontWeight: 100, duration: 0.01, ease: "none", delay: 2 })
+    .to(dynamicText, { fontFamily: "steps-mono", fontSize: "3rem", duration: 0.01, ease: "none", delay: 2 });
+    ;
+
+// Fijar fuente al hacer scroll a la siguiente sección
+ScrollTrigger.create({
+    trigger: ".scroll-image",       // sección siguiente
+    start: "top center",
+    onEnter: () => {
+        gsap.set(dynamicText, {
+            fontFamily: "Inter, sans-serif",
+            fontSize: "3rem"
         });
-    });*/
+    }
+});
