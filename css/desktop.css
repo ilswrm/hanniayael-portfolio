@@ -1,5 +1,5 @@
 .menu {
-    flex-direction: row; /* horizontal en desktop */
+    flex-direction: row;
     justify-content: space-between;
     padding: 26px 40px;
 }
@@ -20,8 +20,26 @@
     font-size: 1rem; 
     font-weight: 500;
 }
-
 .lang-icon {
     display: inline-block; 
     margin-top: 0;
+}
+
+.logo{
+    font-size: 1.5rem;
+}
+.hero-text{
+    font-size: 1.2rem;
+}
+.hero-text.last {
+    align-self: self-start;
+}
+.scroll {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.scroll span{
+    width: 1rem;
+    height: 1rem;
+    
 }

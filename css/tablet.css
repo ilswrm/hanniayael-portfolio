@@ -1,0 +1,18 @@
+.logo{
+    font-size: 1.2rem;
+}
+.menu-logo{
+    font-size: 1rem;
+}
+.hero-text{
+    font-size: 1.2rem;
+}
+.hero-text.last {
+    align-self: center;
+    text-align: center;
+}
+.scroll {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+/*

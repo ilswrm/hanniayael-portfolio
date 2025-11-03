@@ -72,8 +72,9 @@ body{
 }
 
 main{
-    margin: 1rem;
-    margin-bottom: 80px;
+    margin: 0 1rem;
+    
+    
 }
 /* =====================================
 HEADER / NAVBAR MOBILE FIRST
@@ -191,6 +192,7 @@ header {
     font-size: 2.8rem;
     text-align: left;
     line-height: 1.2;
+    margin-top: .3rem;
     margin-bottom: 2rem;
 
 }
@@ -227,9 +229,23 @@ header {
     font-weight: 500;
     display: inline-block;
 }
+/* =====================================
+SCROLL
+===================================== */
 .scroll{
     padding-top: 20px;
     padding-bottom:80px;
     text-align: center;
+    font-weight: 600;
+}
+
+.scroll span{
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: url("../assets/icons/flow.svg");
+    background-size: cover;
+    rotate: 90deg;
+    margin-top: 2rem;
 }
 
