@@ -11,17 +11,17 @@
     flex-direction: row;
     width: auto;
     height: auto;
-    opacity: 1; /* visible siempre */
+    opacity: 1; 
     pointer-events: all;
     background: none;
     gap: 1.5rem;
 }
 .menu-item a {
-    font-size: 1rem; /* tamaño desktop */
+    font-size: 1rem; 
     font-weight: 500;
 }
 
 .lang-icon {
-    display: inline-block; /* visible en desktop */
+    display: inline-block; 
     margin-top: 0;
 }
