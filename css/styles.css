@@ -9,37 +9,37 @@ RESET / VARIABLES / FUENTES
 
 @font-face {
     font-family: 'interlope';
-    src: url('../assets/fonts/interlope/Interlope-Regular.ttf') format('ttf');
+    src: url('../assets/fonts/interlope/interlope.woff2') format('woff2');
     font-weight: regular;
     font-style: normal;
     }
 @font-face {
     font-family: 'steps-mono';
-    src: url('../assets/fonts/steps-mono/Steps-Mono.otf') format('otf');
+    src: url('../assets/fonts/steps-mono/stepsmono.woff2') format('woff2');
     font-weight: mono;
     font-style: normal;
     }
 @font-face {
     font-family: 'murmure';
-    src: url('../assets/fonts/murmure/le-murmure.ttf') format('truetype');
+    src: url('../assets/fonts/murmure/murmure.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     }
 @font-face {
     font-family: 'karrik';
-    src: url('../assets/fonts/karrik/Karrik-Regular.ttf') format('ttf');
+    src: url('../assets/fonts/karrik/karrik.woff2') format('woff2');
     font-weight: regular;
     font-style: regular;
     }
 @font-face {
     font-family: 'picnic';
-    src: url('../assets/fonts/picnic/PicNic-Regular.otf') format('otf');
+    src: url('../assets/fonts/picnic/picnic.woff2') format('woff2');
     font-weight: regular;
     font-style: regular;
     }
 @font-face {
     font-family: 'outward';
-    src: url('../assets/fonts/outward/outward-block.ttf') format('truetype');
+    src: url('../assets/fonts/outward/outward.woff2') format('woff2');
     font-weight: regular;
     font-style: regular;
     }
