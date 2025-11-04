@@ -130,3 +130,17 @@ ScrollTrigger.create({
         });
     }
 });
+
+gsap.utils.toArray('.hero-text').forEach(text => {
+    gsap.to(text, {
+        opacity: 0,
+        y: -30,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'top top',
+            end: 'bottom 20%',
+            scrub: true,
+        }
+    });
+});

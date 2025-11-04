@@ -65,16 +65,33 @@ RESET / VARIABLES / FUENTES
 BODY / MAIN / TIPOGRAFÍA
 ===================================== */
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+}
+
+.fix-ios {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+
 body{
     font-family: var(--font-body1);
     background-color: var(--color-background);
     color: var(--color-text);
 }
-
 main{
-    margin: 0 1rem;
-    
-    
+    margin: 0 1rem;  
 }
 /* =====================================
 HEADER / NAVBAR MOBILE FIRST
@@ -117,7 +134,7 @@ MENU LIST (MOBILE)
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100dvh;
     background-color: var(--color-background);
     gap: 3rem;
@@ -186,6 +203,7 @@ header {
     display: flex;
     flex-direction: column;
 }
+
 .hero-title{
     font-family: var(--font-headings);
     font-weight: 600;
