@@ -162,3 +162,21 @@ if (track) {
     }
   });
 }
+
+const galleryItems = gsap.utils.toArray(".gallery-item:not(.item0)"); // excluye el texto inicial
+
+galleryItems.forEach((item, i) => {
+  const speed = gsap.utils.random(0.3, 1); // define qué tan rápido va cada imagen
+
+    gsap.to(item, {
+    x: () => -(document.querySelector(".gallery-track").scrollWidth - window.innerWidth) * speed,
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".gallery-horizontal",
+        start: "top top",
+        end: () => "+=" + document.querySelector(".gallery-track").scrollWidth,
+        scrub: true,
+        pin: false
+    }
+    });
+});
