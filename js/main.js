@@ -1,15 +1,3 @@
-/*let title = document.querySelector(".title");
-gsap.from(title,{
-    color:"red",
-    backgroundColor: "green",
-    x: -100,
-    rotate:360,
-    scale: 3,
-    duration: 5,
-    delay:0,
-    ease:"back.out"
-
-} )*/
 
 document.addEventListener('DOMContentLoaded', () => {
     const menuLogo = document.querySelector('.menu-logo');
@@ -144,3 +132,33 @@ gsap.utils.toArray('.hero-text').forEach(text => {
         }
     });
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".gallery-horizontal", {
+  xPercent: 0,
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "bottom 80%",
+    end: "bottom top",
+    scrub: true,
+  }
+});
+
+// Scroll horizontal real
+const track = document.querySelector(".gallery-track");
+
+if (track) {
+  gsap.to(track, {
+    x: () => -(track.scrollWidth - window.innerWidth),
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".gallery-horizontal",
+      start: "top top",
+      end: () => "+=" + track.scrollWidth,
+      scrub: 1,
+      pin: true,
+      anticipatePin: 1
+    }
+  });
+}
