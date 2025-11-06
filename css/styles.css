@@ -89,7 +89,10 @@ html, body {
 body{
     font-family: var(--font-body1);
     background-color: var(--color-background);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+    background-size: 2px 2px;
     color: var(--color-text);
+    
 }
 main{
     margin: 0 1rem;  
@@ -122,7 +125,11 @@ HEADER / NAVBAR MOBILE FIRST
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: .8rem;
-
+    cursor: pointer;
+}
+.logo a{
+    text-decoration: none;
+    color: var(--color-text);
 }
 /* =====================================
 MENU LIST (MOBILE)
@@ -208,15 +215,15 @@ header {
 
 .hero-title{
     font-family: var(--font-headings);
-    font-weight: 600;
-    font-size: 2.8rem;
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 0.08rem;
     text-align: left;
-    line-height: 1.2;
-    margin-top: .3rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    
 
 }
-.hero-text{
+/*.hero-text{
     font-family: var(--font-sections);
     font-size: 1rem;
     font-weight: 400;
@@ -224,13 +231,14 @@ header {
     max-width: 100%;
     margin-bottom: 1.5rem;
     text-align: right ;
-}
-.hero-text.last{
+}*/
+.hero-text{
     margin-top: auto;        
-    align-self: flex-end; 
-    text-align: left;  
+    text-align: center;
+    font-size: 0.9rem; 
+    letter-spacing: 0.03em;
+    opacity: 0.7;
     font-weight: 400;
-
     margin-bottom: 0;
 }
 .hero-dynamic-text{
@@ -253,7 +261,7 @@ header {
 SCROLL
 ===================================== */
 .scroll{
-    padding-top: 20px;
+    padding-top: 12rem;
     padding-bottom:80px;
     text-align: center;
     font-weight: 600;
@@ -284,6 +292,9 @@ GALLERY
     left: 0;
     width: 200vw; /*checar si funciona*/
     height: 100%;
+    background-color: var(--color-background);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+    background-size: 2px 2px;
 }
 .gallery-item {
     position: absolute;
@@ -300,7 +311,7 @@ GALLERY
 .item0{
     height: 100vh;
     width: 100px;
-    background-color: #1516FE;
+    background-color:#e5e6dd;
     font-family: 'Inter';
     font-weight: bold;
     font-size: 4rem;
@@ -310,12 +321,14 @@ GALLERY
     z-index: 20;
 }
 .item0 span{
-    display: block;
+    display: inline-block;
     rotate: -90deg;
-    color: var(--color-background);
+    color: var(--color-text);
+    white-space: nowrap;
 }
-.item1 { width: 400px; top: 10%; left: 0%; z-index: 25;  }
+.item1 { width: 430px; top: 10%; left: 0%; z-index: 25;  }
 .item2 { width: 250px; top: 50%; left: 20%; z-index: 10; }
 .item3 { width: 320px; top: 25%; left: 45%; z-index: 10; }
 .item4 { width: 200px; top: 60%; left: 70%; z-index: 10; }
-.item5 { width: 280px; top: 35%; left: 90%; z-index: 10; }
+.item5 { width: 280px; top: 35%; left: 20%; z-index: 10; }
+

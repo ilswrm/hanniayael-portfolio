@@ -135,13 +135,35 @@ gsap.utils.toArray('.hero-text').forEach(text => {
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".gallery-horizontal", {
-  xPercent: 0,
+// === FADE DEL HERO ===
+const heroTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: ".hero",
-    start: "bottom 80%",
+    start: "top top",
     end: "bottom top",
     scrub: true,
+    pin: true, // mantiene fijo el hero mientras hace fade
+    anticipatePin: 1
+  }
+});
+
+// Fade del texto y la flechita al mismo tiempo
+heroTimeline.to(".hero-text, .scroll", {
+  opacity: 0,
+  y: -50,
+  ease: "power2.out",
+  duration: 1
+});
+
+// === CAMBIO DE FUENTE AL ENTRAR A GALERÍA ===
+ScrollTrigger.create({
+  trigger: ".scroll-image",
+  start: "top center",
+  onEnter: () => {
+    gsap.set(".dynamic-text", {
+      fontFamily: "Inter, sans-serif",
+      fontSize: "3rem"
+    });
   }
 });
 
@@ -155,10 +177,22 @@ if (track) {
     scrollTrigger: {
       trigger: ".gallery-horizontal",
       start: "top top",
-      end: () => "+=" + track.scrollWidth,
+      end: () => "+=" + (track.scrollWidth - window.innerWidth),
       scrub: 1,
       pin: true,
-      anticipatePin: 1
+      anticipatePin: 1,
+      invalidateOnRefresh: true, // recalcula si cambian tamaños
+      markers: false
+    }
+  });
+  gsap.to(".gallery-horizontal", {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".gallery-horizontal",
+      start: () => "right center", // empieza el fade cuando casi termina
+      end: () => "+=400", // controla qué tan largo es el desvanecido
+      scrub: true,
+      markers: false
     }
   });
 }
