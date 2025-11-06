@@ -223,15 +223,6 @@ header {
     
 
 }
-/*.hero-text{
-    font-family: var(--font-sections);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.4;
-    max-width: 100%;
-    margin-bottom: 1.5rem;
-    text-align: right ;
-}*/
 .hero-text{
     margin-top: auto;        
     text-align: center;
@@ -261,7 +252,7 @@ header {
 SCROLL
 ===================================== */
 .scroll{
-    padding-top: 12rem;
+    margin-top: 5rem;
     padding-bottom:80px;
     text-align: center;
     font-weight: 600;

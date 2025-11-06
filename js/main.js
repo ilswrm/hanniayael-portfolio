@@ -100,10 +100,10 @@ const dynamicText = document.querySelector(".changing-text");
 // Timeline para rotar tipografías y tamaños instantáneamente
 const tl = gsap.timeline({ repeat: -1 });
 
-tl.to(dynamicText, { fontFamily: "interlope", fontSize: "3.9rem", duration: 0.01, ease: "none", delay: 2 })
+tl.to(dynamicText, { fontFamily: "interlope", fontSize: "3.8rem", duration: 0.01, ease: "none", delay: 2 })
     .to(dynamicText, { fontFamily: "picnic", fontSize: "4rem", duration: 0.01, ease: "none", delay: 3 })
-    .to(dynamicText, { fontFamily: "murmure", fontSize: "8rem", duration: 0.01, ease: "none", delay: 2})
-    .to(dynamicText, { fontFamily: "outward", fontSize: "15rem",fontWeight: 100, duration: 0.01, ease: "none", delay: 2 })
+    .to(dynamicText, { fontFamily: "murmure", fontSize: "7rem", duration: 0.01, ease: "none", delay: 2})
+    .to(dynamicText, { fontFamily: "outward", fontSize: "14rem",fontWeight: 100, duration: 0.01, ease: "none", delay: 2 })
     .to(dynamicText, { fontFamily: "steps-mono", fontSize: "3rem", duration: 0.01, ease: "none", delay: 2 });
     ;
 
