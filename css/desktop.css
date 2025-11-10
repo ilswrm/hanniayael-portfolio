@@ -1,3 +1,14 @@
+:root{
+    --color-background: #E5E5DD;
+    --color-text: #1a1a1a;
+    --color-secondary-text: #888888;
+    --color-accent: #1516FE;
+    --color-highlights:#FFFFFF;
+    --font-headings: 'Inter', sans-serif;
+    --font-sections: 'Inter', sans-serif;
+    --font-body1: 'Roboto', sans-serif;
+    --font-body2: 'Playfair Display', serif;
+}
 .menu {
     flex-direction: row;
     justify-content: space-between;
