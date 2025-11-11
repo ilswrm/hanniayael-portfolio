@@ -391,4 +391,71 @@ footer{
     opacity: 0.8;
 }
 
+/* ==========================================================================
+contact.html
+===================================== */
+.main-contacto{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+.contacto-info{
+    font-family: 'Inter', sans-serif;
+    max-width: 600px;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.contacto-title{
+    font-family: 'Inter', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+}
+.name{
+    font-weight: 600;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+.career{
+    font-size: 1rem;
+    opacity: 0.8;
+}
+.contacto-mail{
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.contacto-mail:hover {
+    color: var(--color-accent);
+    -webkit-text-stroke-width: .1px; 
+    -webkit-text-stroke-color: white;
+    transition: color 0.3s ease;
+}
+.contacto-sm{
+    margin-top: 4rem;
+}
+.contacto-sm a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem;
+}
+.contacto-sm a:hover {
+    color: var(--color-accent);
+    -webkit-text-stroke-width: .1px; 
+    -webkit-text-stroke-color: white;
+    transition: color 0.3s ease;
+}
 
