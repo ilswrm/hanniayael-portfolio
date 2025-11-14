@@ -69,30 +69,29 @@ html, body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
-    background-color: var(--color-background);
+    min-height: 100%;
 }
 * {
     box-sizing: border-box;
 }
+html {
+    background-color: var(--color-background);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+    background-size: 2px 2px;
 
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
 .fix-ios {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
 }
-
-:root {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-}
-
 body{
+    margin: 0;
     font-family: var(--font-body1);
-    background-color: var(--color-background);
-    background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px);
-    background-size: 2px 2px;
     color: var(--color-text);
-    
 }
 main{
     margin: 0 1rem;  
