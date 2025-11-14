@@ -1,11 +1,6 @@
 /* =====================================
-RESET / VARIABLES / FUENTES
+VARIABLES / FUENTES
 ===================================== */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 @font-face {
     font-family: 'interlope';
@@ -62,26 +57,28 @@ RESET / VARIABLES / FUENTES
     
 }
 /* =====================================
-BODY / MAIN / TIPOGRAFÍA
+RESET / BODY / MAIN / TIPOGRAFÍA
 ===================================== */
-
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 html, body {
     width: 100%;
     max-width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
 }
-* {
-    box-sizing: border-box;
-}
 body {
-    margin: 0;
-    font-family: var(--font-body1);
-    color: var(--color-text);
-
     background-color: var(--color-background);
     background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px);
     background-size: 2px 2px;
+
+    font-family: var(--font-body1);
+    color: var(--color-text);
 
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
@@ -89,13 +86,18 @@ body {
     padding-right: env(safe-area-inset-right);
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-background);
+    background-image: radial-gradient(rgba(0,0,0,0.07) 1px, transparent 1px);
+    background-size: 2px 2px;
+    z-index: -1;
+}
+
 main {
     margin: 0 1rem;
-}
-.fix-ios {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
 }
 /* =====================================
 HEADER / NAVBAR MOBILE FIRST
