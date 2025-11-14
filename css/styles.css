@@ -390,7 +390,64 @@ footer{
     margin: 0.3rem 0;
     opacity: 0.8;
 }
+/* ==========================================================================
+about.html
+===================================== */
+.about{
+    height: 100vh;
+    padding: 2.5rem 1.5rem;
+}
+.about-container {
+    display: flex;
+    flex-direction: column;
+}
+.about-image {
+    width: 100%;
+    max-width: 380px;
+    margin-bottom: 2rem;
+}
 
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; 
+    object-fit: cover;
+}
+
+.about-title {
+    font-size: 3rem;
+    font-family: "Inter", serif;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.about-content {
+    padding: 2.5rem 1.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp .8s ease-out forwards;
+    animation-delay: .2s;
+}
+
+.about-text {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+}
+.about-text p{
+    margin-bottom: 1.6rem;
+}
+.about-text p:nth-child(2){
+    text-align: right;
+}
+.about-text p:nth-child(4){
+    text-align:right;
+    
+
+}
+
+@keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
 /* ==========================================================================
 contact.html
 ===================================== */
@@ -458,4 +515,5 @@ contact.html
     -webkit-text-stroke-color: white;
     transition: color 0.3s ease;
 }
+
 
