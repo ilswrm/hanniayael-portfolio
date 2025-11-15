@@ -100,12 +100,63 @@ const dynamicText = document.querySelector(".changing-text");
 // Timeline para rotar tipografías y tamaños instantáneamente
 const tl = gsap.timeline({ repeat: -1 });
 
-tl.to(dynamicText, { fontFamily: "interlope", fontSize: "3.8rem", duration: 0.01, ease: "none", delay: 2 })
-    .to(dynamicText, { fontFamily: "picnic", fontSize: "4rem", duration: 0.01, ease: "none", delay: 3 })
-    .to(dynamicText, { fontFamily: "murmure", fontSize: "7rem", duration: 0.01, ease: "none", delay: 2})
-    .to(dynamicText, { fontFamily: "outward", fontSize: "14rem",fontWeight: 100, duration: 0.01, ease: "none", delay: 2 })
-    .to(dynamicText, { fontFamily: "steps-mono", fontSize: "3rem", duration: 0.01, ease: "none", delay: 2 });
+tl.to(dynamicText, { fontFamily: "interlope", fontSize: "3.8rem", duration: 0.01, ease: "none", delay: 7 })
+    .to(dynamicText, { fontFamily: "picnic", fontSize: "4rem", duration: 0.01, ease: "none", delay: 7})
+    .to(dynamicText, { fontFamily: "murmure", fontSize: "7rem", duration: 0.01, ease: "none", delay: 7})
+    .to(dynamicText, { fontFamily: "steps-mono", fontSize: "3rem", duration: 0.01, ease: "none", delay: 0 });
     ;
+
+// typewriter
+const typeTarget = document.querySelector(".changing-text");
+const words = ["Hannia Yael", "Hannia Yael"];
+
+let index = 0;
+
+function typeWord() {
+  const word = words[index];
+  let letters = word.split("");
+  typeTarget.textContent = "";
+
+  letters.forEach((letter, i) => {
+    gsap.to({}, {
+      duration: 0.05,
+      delay: i * 0.07,
+      onComplete: () => {
+        typeTarget.textContent += letter;
+      }
+    });
+  });
+
+  gsap.to({}, {
+    delay: letters.length * 0.1 + 3,
+    onComplete: eraseWord
+  });
+}
+
+function eraseWord() {
+  const text = typeTarget.textContent;
+  let letters = text.split("");
+
+  letters.forEach((_, i) => {
+    gsap.to({}, {
+      duration: 0.05,
+      delay: i * 0.1,
+      onComplete: () => {
+        typeTarget.textContent = text.substring(0, text.length - (i + 1));
+      }
+    });
+  });
+
+  gsap.to({}, {
+    delay: letters.length * 0.2 + 0.5,
+    onComplete: () => {
+      index = (index + 1) % words.length;
+      typeWord();
+    }
+  });
+}
+
+typeWord();
 
 // Fijar fuente al hacer scroll a la siguiente sección
 ScrollTrigger.create({

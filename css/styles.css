@@ -254,6 +254,18 @@ header {
     font-weight: 500;
     display: inline-block;
 }
+.changing-text::after {
+    content: "|";
+    font-family: 'Roboto';
+    font-weight: 200;
+    margin-left: 4px;
+    animation: blink 0.7s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
 /* =====================================
 SCROLL
 ===================================== */
@@ -422,6 +434,17 @@ about.html
     font-weight: 600;
     letter-spacing: -0.5px;
 }
+.about-title::after {
+    content: '|';
+    display: inline-block;
+    animation: parpadeo 2.2s infinite;
+    font-family: 'Roboto';
+    font-weight: 200;
+}
+@keyframes parpadeo {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
 .about-content {
     padding: 2.5rem 1.5rem;
 }
@@ -466,6 +489,18 @@ contact.html
     font-weight: 600;
     margin-bottom: 2rem;
     letter-spacing: -0.5px;
+}
+.contacto-title::after {
+    content: '|';
+    display: inline-block;
+    animation: parpadeo 2.5s infinite;
+    font-family: 'Roboto';
+    font-weight: 200;
+}
+
+@keyframes parpadeo {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
 }
 .name{
     font-weight: 600;
