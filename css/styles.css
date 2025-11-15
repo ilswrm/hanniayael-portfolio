@@ -474,7 +474,6 @@ about.html
     color: var(--color-text);
     font-weight: 500;
     transition: all 0.3s ease;
-    align-items: center;
 }
 .about-btn:hover{
     background-color: var(--color-accent);
