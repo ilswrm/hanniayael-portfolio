@@ -462,6 +462,25 @@ about.html
     text-align:right;
     margin-bottom: 3rem;  
 }
+.about-wrapper {
+    display: block;
+}
+.about-btn{
+    display: inline-block;
+    border: 1px solid var(--color-text);
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    align-items: center;
+}
+.about-btn:hover{
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    border: 2px solid var(--color-background);
+}
 
 /* ==========================================================================
 contact.html
@@ -542,5 +561,3 @@ contact.html
     -webkit-text-stroke-color: white;
     transition: color 0.3s ease;
 }
-
-

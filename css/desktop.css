@@ -54,3 +54,28 @@
     height: 1rem;
     
 }
+/* ==========================================================================
+about.html
+===================================== */
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 2rem; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.about {
+    height: auto; 
+    padding: 2.5rem;
+}
+.about-image{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+
+}
+
+.about-content {
+    padding: 2.5rem;
+    align-self: center;
+}
